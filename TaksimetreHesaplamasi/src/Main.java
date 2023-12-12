@@ -6,7 +6,6 @@ public class Main {
         double km, kmUcreti, indiBindi = 20, tutar;
 
         System.out.println("Mesafeyi KM türü ile yazın");
-
         Scanner mesafe = new Scanner(System.in);
 
         km = mesafe.nextDouble();
