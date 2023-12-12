@@ -1,17 +1,34 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
+        //Değişkenler, tam sayı olmama durumuna karşı double ile atandı.
+        double tutar, kdvOrani1, kdvOrani2, kdvTutari, kdvliTutar;
+
+        //Kullanıcıdan tutar değişkenini almak için scanner atandı.
+        Scanner deger = new Scanner(System.in);
+        System.out.println("Hesağlamak istediğiniz değeri girin");
+        tutar = deger.nextDouble();
+
+        //Girilen tutara göre uygunlanacak şartlar belirlendi.
+        if (tutar > 0 && tutar <= 1000) {
+            kdvOrani1 = 0.18;
+            kdvTutari = tutar * kdvOrani1;
+            kdvliTutar = tutar + kdvTutari;
+            System.out.println("Girdiğiniz değerin KDV tutarı " + kdvTutari);
+            System.out.println("Girdiğiniz değerin KDV'li hali " + kdvliTutar);
+        } else if (tutar > 1000) {
+            kdvOrani2 = 0.08;
+            kdvTutari = tutar * kdvOrani2;
+            kdvliTutar = tutar + kdvTutari;
+            System.out.println("Girdiğiniz değerin KDV tutarı " + kdvTutari);
+            System.out.println("Girdiğiniz değerin KDV'li hali " + kdvliTutar);
+        } else {
+            System.out.println("Geçerli değer girin!");
         }
+
+
     }
 }
