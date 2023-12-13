@@ -1,15 +1,23 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
+        //Kullanılacak değişkenler belirlendi
+        int r;
+        double piSayisi = 3.14, alan, cevre;
 
-        for (int i = 1; i <= 5; i++) {
+        //Kullanıcıdan veri almak için Scanner atandı
+        Scanner yaricap = new Scanner(System.in);
 
+        //Değişkenlere değer atanarak işlem gerçekleştirildi.
+        System.out.println("Dairenin yarıçapını girin");
 
-        }
+        r = yaricap.nextInt();
+        alan = piSayisi * (r * r);
+        cevre = 2 * (piSayisi * r);
+
+        System.out.println("Dairenin alanı " + alan);
+        System.out.println("Dairenin çevresi " + cevre);
     }
 }
