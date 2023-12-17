@@ -2,8 +2,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+        //Değişkenler tanımlandı.
         int n;
         double toplam = 0, bolunenler = 0, ortalama;
+
+        //Veri almak için scanner atandı.
         Scanner inp = new Scanner(System.in);
 
         System.out.print("Sayı Giriniz: ");
