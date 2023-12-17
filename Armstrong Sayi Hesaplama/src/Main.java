@@ -24,12 +24,12 @@ public class Main {
 
         //Basamakların değerleri hesaplandı.
         while (tempSayi != 0) {
-            basamak = tempSayi % 10;
+            int basamakDegeri = tempSayi % 10;
             int us = 1;
 
             //Basamakların üssü alındı.
             for (int i = 1; i <= basamak; i++) {
-                us *= basamak;
+                us *= basamakDegeri;
             }
 
             sonuc += us;
@@ -38,7 +38,7 @@ public class Main {
         }
         //Sonuç yazdırıldı.
         if (sonuc == sayi) {
-            System.out.println(sayi + "Armstrong bir sayıdır.");
+            System.out.println(sayi + " Armstrong bir sayıdır.");
         } else {
             System.out.println(sayi + "Armstrong bir sayı değildir.");
         }
